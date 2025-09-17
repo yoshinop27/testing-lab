@@ -76,5 +76,24 @@ public class Functions {
 		}
 		return -1;
 	}
+
+	public static int lucas (int n) {
+		// Initialize
+		int prev = 2;
+		int curr = 1;
+		int nextLucasNumber = 0;
+		if (n == 0) {
+			return 2;
+		} else if (n == 1) {
+			return 1;
+		} else {
+			for (int i=0; i < n-1; i++) {
+				nextLucasNumber = prev + curr;
+				prev = curr;
+				curr = nextLucasNumber;
+			}
+			return curr;
+		}
+	}
 }
 
