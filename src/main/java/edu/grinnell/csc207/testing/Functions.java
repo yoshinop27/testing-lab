@@ -38,4 +38,43 @@ public class Functions {
 			return g3;
 		}
 	}
+
+	/**
+	 * @param arr the input array
+	 * sorts an integer array by using index as a divider between sorted and unsorted array sections
+	 * @throws IllegalArgumentException if the array is empty
+	 */
+	public static void sort(int[] arr) {
+		if (arr.length == 0) {
+			throw new IllegalArgumentException();
+		}
+		for (int i = 0; i < (arr.length-1); i++) {
+			if (arr[i] > arr[i+1]) {
+				int temp = arr[i];
+				arr[i] = arr[i+1];
+				arr[i+1] = temp;
+			}
+		}
+	}
+
+	/**
+	 * @params s, t are strings
+	 * returns the index t starts at in s if t is a substring of s, otherwise returns -1
+	 * @throws IllegalArgumentException if either string is null
+	 */
+	public static int substringIndex(String s, String t) {
+		if ((s == null) || (t == null)) {
+			throw new IllegalArgumentException();
+		}
+		if (s.length() < t.length()) {
+			return -1;
+		}
+		for (int i = 0; i <= (s.length()-t.length()); i++) {
+			if (s.substring(i, i+t.length()).equals(t)) {
+				return i;
+			}
+		}
+		return -1;
+	}
 }
+
