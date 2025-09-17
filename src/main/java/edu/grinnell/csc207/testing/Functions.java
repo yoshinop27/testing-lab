@@ -17,21 +17,22 @@ public class Functions {
 		} else if (arr.length == 2) {
 			return Math.max(arr[0], arr[1]);
 		} else {
+			int sum = arr[0] + arr[1] + arr[2];
 			int g1 = Math.max(arr[0], Math.max(arr[1], arr[2]));
-			int g2 = Math.min(arr[0], Math.min(arr[1], arr[2]));
-			int g3 = Math.max(arr[0], Math.min(arr[1], arr[2]));
+			int g3 = Math.min(arr[0], Math.min(arr[1], arr[2]));
+			int g2 = sum - g1 - g3;
 			for (int i = 3; i < arr.length; i++) {
 				if (arr[i] > g1) {
 					g3 = g2;
 					g2 = g1;
 					g1 = arr[i];
 				}
-				if (arr[i] > g2) {
+				else if (arr[i] > g2) {
 					g3 = g2;
 					g2 = arr[i];
 				}
-				if (arr[i] > g1) {
-					g1 = arr[i];
+				else if (arr[i] > g3) {
+					g3 = arr[i];
 				}
 			}
 			return g3;

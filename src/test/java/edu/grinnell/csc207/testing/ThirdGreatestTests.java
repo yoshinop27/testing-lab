@@ -14,7 +14,35 @@ public class ThirdGreatestTests {
 		assertEquals(4, Functions.thirdGreatest(arr));
 	}
 	
-	// TODO: add additional unit tests here!
+	@Test
+	public void oneElement(){
+		int[] arr = {1};
+		assertEquals(1, Functions.thirdGreatest(arr));
+	}
+
+	@Test
+	public void twoElement() {
+		int[] arr = {2,1};
+		assertEquals(2, Functions.thirdGreatest(arr));
+ 	}
+
+	@Test
+	public void threeElement(){
+		int[] arr = {2, 6, 4};
+		assertEquals(2, Functions.thirdGreatest(arr));
+	}
+
+	@Test
+	public void multiple(){
+		int[] arr = {1, 5, 4, 56, 2};
+		assertEquals(4, Functions.thirdGreatest(arr));
+	}
+
+	@Test
+	public void duplicates(){
+		int[] arr = {3, 4, 4, 6, 1};
+		assertEquals(4, Functions.thirdGreatest(arr));
+	}
 	
 	@Property
 	public boolean examplePropertyTest(@ForAll @IntRange(min = 1, max = 1000) int sz,
