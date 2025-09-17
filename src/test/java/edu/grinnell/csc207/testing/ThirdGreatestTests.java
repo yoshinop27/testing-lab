@@ -56,7 +56,7 @@ public class ThirdGreatestTests {
 		
 	// TODO: add additional property tests here!
 	@Property
-	public boolean mulitpleElements(@ForAll @IntRange(min=4, max=20) int k){
+	public boolean multipleElements(@ForAll @IntRange(min=4, max=20) int k){
 		int[] arr = {3, 2, 1, k, 30, 40};
 		return Functions.thirdGreatest(arr) == k;
 	}
