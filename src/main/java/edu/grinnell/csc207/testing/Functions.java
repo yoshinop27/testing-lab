@@ -95,5 +95,31 @@ public class Functions {
 			return curr;
 		}
 	}
+
+	/**
+	 * Returns the sum of the seqiemce (0, 1, 2, ... n)
+	 * @param n non-negative integer
+	 */
+	public static int sum (int n) {
+		int res = 0;
+		for (int i=1; i<n+1; i++){
+			res += i;
+		}
+		return res;
+	}
+
+	/**
+	 * Returns the minimum in an array
+	 * @param arr array of integers
+	 */
+	public static int min (int[] arr) {
+		int min = arr[0];
+		for (int i=1; i<arr.length; i++){
+			if (min > arr[i]) {
+				min = arr[i];
+			}
+		}
+		return min;
+	}
 }
 
