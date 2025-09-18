@@ -1,9 +1,10 @@
 # Testing Lab
 
-Authors(s): _(TODO: fill in names here!)_
+Authors(s): Meryem, Preston, Z
 
 ## Resources
 
 +   Lab write-up
     - <https://osera.cs.grinnell.edu/ttap/data-structures-labs/testing-frameworks.html>
-+   _(TODO: fill in additional resources here!)_
++    VS Code
++    Java version "17.0.16"
